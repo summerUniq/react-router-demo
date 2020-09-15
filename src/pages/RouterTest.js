@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
 import {BrowserRouter, Link, Route} from 'react-router-dom'
+import ProductList from './Index'
 
 
-function ProductList(props) {
-    return <div>ProductList</div>;
-  }
+// function ProductList(props) {
+//     return <div>ProductList</div>;
+//   }
   function ProductMgt(props) {
     return <div>ProductMgt</div>;
   }
