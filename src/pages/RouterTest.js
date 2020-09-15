@@ -1,6 +1,8 @@
 import React, { Component, lazy, Suspense } from 'react';
 import { BrowserRouter, Link, Route, Switch } from 'react-router-dom'
 import Error404 from './Error404'
+import PrivateRoute from './PrivateRoute';
+import Login from './Login'
 // import ProductList from './Index'
 // import ProductMgt from './ProductMgt'
 
@@ -39,12 +41,12 @@ class RouterTest extends Component {
                  <Suspense fallback={<div>Loading...</div>}>
                     <Switch>
                             <Route exact path="/" component={ProductList} />
-                            <Route exact path="/management" component={ProductMgt} />
+                            <PrivateRoute path="/management" component={ProductMgt} exact/>
                             <Route exact path="/management/1111" component={Management11111} />
                             <Route exact path="/detail/:name" component={Detail} />
+                            <Route exact path="/login" component={Login} />
                             <Route component={Error404} />
                     </Switch>
-
               </Suspense>
                 </div>
             </BrowserRouter>
