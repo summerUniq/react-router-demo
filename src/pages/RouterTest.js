@@ -1,14 +1,15 @@
 import React, {Component} from 'react';
 import {BrowserRouter, Link, Route} from 'react-router-dom'
 import ProductList from './Index'
+import ProductMgt from './ProductMgt'
 
 
 // function ProductList(props) {
 //     return <div>ProductList</div>;
 //   }
-  function ProductMgt(props) {
-    return <div>ProductMgt</div>;
-  }
+//   function ProductMgt(props) {
+//     return <div>ProductMgt</div>;
+//   }
 
   function Detail({match, history, location}) {
       console.log(match, history, location);
