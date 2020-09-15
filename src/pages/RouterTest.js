@@ -1,15 +1,13 @@
 import React, {Component} from 'react';
-import {BrowserRouter, Link, Route} from 'react-router-dom'
+import {BrowserRouter, Link, Route, Switch} from 'react-router-dom'
 import ProductList from './Index'
 import ProductMgt from './ProductMgt'
 
-
-// function ProductList(props) {
-//     return <div>ProductList</div>;
-//   }
-//   function ProductMgt(props) {
-//     return <div>ProductMgt</div>;
-//   }
+function Management11111() {
+    return (
+        <div>management11111 new</div>
+    )
+}
 
   function Detail({match, history, location}) {
       console.log(match, history, location);
@@ -34,9 +32,12 @@ class RouterTest extends Component {
                     <Link to="/detail/web">web全栈</Link>
                 </nav>
                 <div>
+                <Switch>
                     <Route exact path="/" component={ProductList}/>
-                    <Route path="/management" component={ProductMgt}/>
+                    <Route exact path="/management" component={ProductMgt}/>
+                    <Route path="/management/1111" component={Management11111}/>
                     <Route path="/detail/:name" component={Detail}/>
+                </Switch>
                 </div>
             </BrowserRouter>
          );
